@@ -5,6 +5,7 @@ GLOBAL
 *, *:before, *:after {
   -moz-box-sizing: border-box;  
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 @font-face {
@@ -61,9 +62,16 @@ body, html {
 }
 
 h1, h2, p, span, a {
-  font-family: 
+  font-family: "museo-sans", serif;
+  color: #2f2e2f;
+  margin: 0;
+  padding: 0;
 }
 
+.width_limit {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 /*========================
 NAV
@@ -72,6 +80,11 @@ NAV
 nav {
   display: none;
 }
+
+
+/*========================
+INTRO CONTAINER
+=========================*/
 
 
 .intro_container {
@@ -91,7 +104,7 @@ nav {
 .badge_container {
   width: 100%;
   position: absolute;
-  bottom: 40%;
+  bottom: 33%;
   text-align: center;
 }
 
@@ -132,15 +145,10 @@ nav {
     border: 4px solid #6D903C;
 }
 
-.description_content {
-  width: 100%;
-  height: 300px;
-  background: white;
-  margin: 0 auto 0 auto;
-  z-index: 99;
-  position: relative;
-  background: white; 
-}
+
+/*========================
+IMAGE INTRO BANNER CONTENT
+=========================*/
 
 .background_content {
   position: relative;
@@ -150,9 +158,23 @@ nav {
   background-color: white;
   margin: 0 auto 0 auto;
   z-index: 98;
-  position: relative;
-  background-size: cover;
   text-align: center;
+}
+
+.background_content h1 {
+  font-size: 3em;
+  width: 60%;
+  position: relative;
+  top: 29%;
+  color: white;
+  padding: 0;
+  border: 0;
+  display: inline-block;
+}
+
+.background_content h1 span {
+  color: white;
+  border-bottom: 8px solid #fff;
 }
 
 .background_content:nth-of-type(2) {
@@ -168,8 +190,183 @@ nav {
 }
 
 
-@media and screen (min-width:640px) {
+/*========================
+DESCRIPTION BODY CONTENT
+=========================*/
+
+
+.description_content {
+  width: 100%;
+  background: white;
+  margin: 0 auto 0 auto;
+  z-index: 99;
+  position: relative;
+  background: white;
+  text-align: center; 
+}
+
+.description_body {
+  margin: 45px 35px;
+}
+
+
+h1 {
+  font-size: 28px;
+  font-weight: 900;
+  width: 225px;
+  letter-spacing: 0.040em;
+  border: 8px solid #2f2e2f;
+  display: inline-block;
+  padding: 7px 16px;
+  margin: 0;
+}
+
+ .description_body p {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.020em;
+  margin: 32px 0 0 0;
+}
+
+
+/*========================
+IMAGE DESCRIPTION BODY CONTENT
+=========================*/
+
+.picture_content {
+  display: none;
+}
+
+
+/*========================
+FIRST FOOTER CONTENT
+=========================*/
+
+.first_footer {
+  background-color: #1e1e1e;
+  width: 100%;
+  text-align: center;
+  padding: 1px 55px;
+}
+
+.social_heading,
+.social_info {
+  display: block;
+}
+
+
+.social_heading {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 0.040em;
+  color: #6c8f34;
+  text-align: center;
+  margin: 40px 0 0 0;
+}
+
+  .social_info, 
+  .social_icons {
+  margin: 18px 0 40px 0;
+}
+
+.social_info a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.200em;
+  line-height: 1.400em;
+  color: #fff;
+}
+
+.social_info a:hover {
+  color: #6c8f34;
+}
+
+.social_icons {
+    padding: 0;
+}
+
+.social_icons li {
+  list-style: none;
+  display: inline-block;
+  padding: none;
+}
+
+.social_icons li:nth-child(1) {
+    margin: 0 17px 0 0;
+}
+
+.social_icons li:nth-child(2) {
+    margin: 0 17px 0 0;
+    padding: 0 0 0 0;
+}
+
+.social_icons li:nth-child(3) {
+    margin: 0 17px 0 0;
+}
+
+.social_icons li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.social_icons li a:hover {
+  color: #6c8f34;
+}
+
+
+/*========================
+SECOND FOOTER CONTENT
+=========================*/
+
+.second_footer {
+  background-color: #262526;
+  width: 100%;
+  padding: 19px;
+  text-align: center;
+}
+
+.second_footer div p {
+  color: #919191;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.090em;
+}
+
+.second_footer a {
+  color: #6c8f34;
+  text-decoration: none;
+}
+
+.second_footer a:hover {
+  border-bottom: 1px solid #6c8f34;
+}
+
+
+.second_footer div:nth-of-type(1),
+.second_footer div:nth-of-type(2) {
+  display: inline-block;
+}
+
+.second_footer div:nth-of-type(1) {
+  margin: 0 43px 0 0;
+}
+
+.second_footer div:nth-of-type(3) {
+  margin: 16px 0 0 0;
+}
+
+
+
+
+/*========================
+MEDIA QUERIES
+=========================*/
+
+@media (min-width: 600px) { 
   nav {
+  display: block;
   position: fixed;
   width: 100%;
   height: 50px;
@@ -213,4 +410,32 @@ nav {
   list-style: none;
   margin: 0 25px 0 25px;
   background-color: red;
+}
+
+.picture_content {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+
+.image_box {
+  height: 500px;
+  width: 200px;
+  margin: 0 20px 0 20px;
+  background: tomato;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  background: url('http://lorempixel.com/300/400') no-repeat center center;
+  background-size: cover;
+}
+
+span {
+  display: inline-block;
+  vertical-align: middle;
+  color: white;
+  text-align: center;
+}
+
+
 }
