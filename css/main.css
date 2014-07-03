@@ -46,6 +46,13 @@ GLOBAL
   content: "\e603";
 }
 
+.icon_knife {
+  width: 40px;
+  height: 20px;
+  margin: 20px auto;
+  opacity: 0.8;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMDAgODUuMyI+PHBhdGggZD0iTTI5OC43IDEyLjZDMjk3LjUgNS41IDI4OC43IDEgMjgzLjEgMWwtODcuOSAwLjNMMzAuNiAxLjVjLTE0LjQgMC0yNS4xIDgtMjUuNSA4LjNsLTUuNCA0bDMuNyA1LjkgYzI1LjkgNDAuOSA3MSA1Ni4zIDEwNC4zIDYyLjFjMzkuMiA2LjcgNzUgMi42IDg4LjMtMS42YzQuMy0xLjQgOC40LTMuMyA5LjMtOGwwLjEtMS4xbDAtMC42YzAtMi4zLTAuNy00LjctMS44LTguNSBjLTAuMi0wLjgtMC41LTEuOC0wLjktM2MtMS4zLTQuMi0zLjQtMTEuMy00LjUtMTYuOGMzLjMtMS4xIDUuOC0xLjggNi42LTEuOWMxLjUgMCA4IDEuNyAxMy40IDMuNmwwLjUgMC4ybDAuNSAwLjEgYzIgMC4zIDEyLjEgMS43IDE2LjQgMS43YzQuMSAwIDEzLjEtMS40IDE1LjctMS45bDAuNC0wLjFsMC40LTAuMWM1LjgtMS45IDEwLjktMy4zIDEyLjYtMy42YzAuOSAwLjMgMi45IDEuMiA1IDIuNCBjMC40IDAuMyAwLjkgMC42IDEuNCAwLjhsMSAwLjZsMS4yIDBsNi4yLTAuNWMwLjIgMCAwLjQgMCAwLjYtMC4xbDguOC0xLjRjNC4yLTEuNyA3LjktNC4yIDkuOC03LjRsMC40LTAuN2wwLjItMC43IGMwLjUtMi4xIDAuOC01LjYgMC44LTkuMUMzMDAgMTcuOCAyOTkuMiAxNC40IDI5OC43IDEyLjZ6Ii8+PC9zdmc+) no-repeat center;
+}
 
 
 body, html {
@@ -114,7 +121,7 @@ INTRO CONTAINER
 .badge_container {
   width: 100%;
   position: absolute;
-  top: 18%;
+  top: 8%;
   text-align: center;
 }
 
@@ -148,7 +155,7 @@ IMAGE INTRO BANNER CONTENT
   font-size: 3em;
   width: 60%;
   position: relative;
-  top: 22%;
+  top: 24%;
   color: white;
   padding: 0;
   border: 0;
@@ -206,11 +213,11 @@ h1 {
 }
 
  .description_body p {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.020em;
-  margin: 32px 0 0 0;
-  line-height: 1.4em;
+  margin: 0 0 0 0;
+  line-height: 1.6em;
   color: #434243;
 }
 
@@ -415,8 +422,12 @@ MEDIA QUERIES TABLET
   
 .intro_container {
   height: 100%;
-
 }
+
+/*========================
+NAV
+=========================*/
+
 
   nav {
   display: block;
@@ -436,25 +447,25 @@ MEDIA QUERIES TABLET
 
 .main-nav {
   padding: 0;
-  margin: 18px auto 0 auto;
+  margin: 19px auto 0 auto;
 }
 
 .main-nav li {
   display: inline-block;
   list-style: none;
-  margin: 0 32px 0 32px;
+  margin: 0 29px 0 29px;
 }
 
 .logo a,
 .main-nav a {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.250em;
     text-decoration: none;
     color: #fff;
     display: block;
     text-align: center;
-    padding: 4px 0;
+    padding: 2px 0;
     transition: color 0.3s ease-in-out;
 }
 
@@ -466,8 +477,21 @@ MEDIA QUERIES TABLET
 .badge_container {
   width: 100%;
   position: absolute;
-  top: 33.5%;
+  top: 35%;
   text-align: center;
+}
+
+
+.arrow a {
+    border: 5px solid rgba(0,0,0,0);
+    display: inline-block;
+    width: 45px;
+    height: 45px;  
+    background-size: 30px; /*This is based off of width*/
+}
+
+.arrow a:hover {
+    border: 5px solid #6D903C;
 }
 
 
@@ -489,10 +513,10 @@ h1 {
 }
 
  .description_body p {
-  font-size: 0.920em;
+  font-size: 1.060em;
   font-weight: 500;
   letter-spacing: 0.020em;
-  margin: 32px 0 25px 0;
+  margin: 0 0 25px 0;
 }
 
 
@@ -741,7 +765,7 @@ MEDIA QUERIE DESKTOP
   float: right;
   padding: 0;
   margin: 0;
-  margin: 19px 20px 0 0;
+  margin: 18px 20px 0 0;
 }
 
 .main-nav li {
@@ -789,6 +813,8 @@ DESCRIPTION BODY CONTENT
   max-width: 450px;
   display: inline-block;
   vertical-align: middle;
+  margin-top: 95px;
+
 }
 
 h1 {
@@ -800,11 +826,11 @@ h1 {
 }
 
  .description_body p {
-  font-size: 0.920em;
   font-weight: 500;
   letter-spacing: 0.020em;
   display: inline-block;
   vertical-align: middle;
+  margin: 0 0 25px 0;
 }
 
 .picture_content {
