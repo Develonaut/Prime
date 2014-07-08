@@ -124,6 +124,22 @@ background:url('https://s3.amazonaws.com/onepagelove/one-page-love-award-left.pn
 }
 
 
+.opm-ribbon { 
+position:absolute; 
+top:300px; 
+left:0px; 
+z-index:99999; 
+} 
+
+.opm-ribbon a { 
+width:65px; 
+height:85px; 
+text-indent:-9999px; 
+display:block; 
+background:url('https://s3.amazonaws.com/onepagemania/opm-badge.png') no-repeat; 
+}
+
+
 /*========================
 NAV
 =========================*/
