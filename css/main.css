@@ -974,13 +974,13 @@ FIRST FOOTER CONTENT
 
 /*THIS IS CONTROLLING THE MARGIN FOR "CONNECT"*/
 .first_footer div:nth-child(2) {
-  margin-right: 100px;
-  margin-left: 50px;
+  margin-right: 130px;
+/*  margin-left: 50px;*/
 }
 
 /*THIS IS CONTROLLING THE MARGIN FOR "OR CALL"*/
 .first_footer div:nth-child(3) {
-  margin-left: 75px;
+  /*margin-left: 75px;*/
 }
 
 .social_heading {
@@ -1027,12 +1027,12 @@ height: 66px;
 }
 
 .second_footer div:nth-of-type(1) {
-margin-left: 40px;
+margin-left: 0px;
 }
 
 .second_footer div:nth-of-type(1),
 .second_footer div:nth-of-type(2) {
-margin-right: 80px;
+margin-right: 50px;
 }
 
 }
